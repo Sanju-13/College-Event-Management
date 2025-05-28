@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>College Event Management</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: white;
+      color: #003366;
+      text-align: center;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #003366;
+      padding: 15px 50px;
+      color: white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #66ccff;
+    }
+
+    .hero {
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      background: url('bg.png') no-repeat center center/cover;
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      
+    }
+
+    .hero-text {
+      color:#005fa3;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      background: #007acc;
+      color: white;
+      padding: 12px 28px;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 8px;
+    }
+
+    .btn:hover {
+      background: #005fa3;
+    }
+
+    .about {
+      padding: 60px 30px;
+      background: #ffffff;
+      color: #003366;
+      margin: 40px auto;
+      max-width: 900px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 102, 0.1);
+    }
+
+    .about h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 18px;
+      color: #333;
+    }
+
+    footer {
+      background: #003366;
+      color: #fff;
+      padding: 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">🎓 College Events</div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="event.html">Events</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text" data-aos="fade-up">
+      <h1>Welcome to College Event Management</h1>
+      <p data-aos="fade-up" data-aos-delay="200">Discover and participate in amazing college events!</p>
+      <a href="event.html" class="btn" data-aos="fade-up" data-aos-delay="400">Explore Events</a>
+    </div>
+  </section>
+
+  <section class="about" data-aos="fade-up">
+    <h2>Why Join Our Events?</h2>
+    <p>Participate, Learn, Network, and Have Fun! Experience the best college events with us.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 College Event Management | All Rights Reserved</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+</html>
