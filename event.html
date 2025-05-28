@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Events</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+    }
+
+    header {
+      background-color: #1565c0;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .event-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .event-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .event-card:hover {
+      transform: scale(1.02);
+    }
+
+    .event-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .event-details {
+      padding: 20px;
+    }
+
+    .event-details h3 {
+      margin: 0 0 10px;
+    }
+
+    .event-details p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .event-details button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #1565c0;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .event-details button:hover {
+      background-color: #0d47a1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #003c8f;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Upcoming Events</h1>
+</header>
+
+<div class="container">
+  <div class="event-grid">
+
+    <!-- Event 1 -->
+    <div class="event-card">
+      <img src="cod.png" alt="Coding Challenge">
+      <div class="event-details">
+        <h3>National Coding Challenge</h3>
+        <p>Showcase your programming skills and solve real-world problems in this competitive event.</p>
+        <button onclick="register('National Coding Challenge', 100)">Register Now</button>
+      </div>
+    </div>
+
+    <!-- Event 2 -->
+    <div class="event-card">
+      <img src="poster.png" alt="Poster Design">
+      <div class="event-details">
+        <h3>Creative Poster Design</h3>
+        <p>Design eye-catching posters to express innovative ideas on social topics and themes.</p>
+        <button onclick="register('Creative Poster Design', 50)">Register Now</button>
+      </div>
+    </div>
+
+    <!-- Event 3 -->
+    <div class="event-card">
+      <img src="ai.png" alt="Robotics Expo">
+      <div class="event-details">
+        <h3>Robotics Expo</h3>
+        <p>Demonstrate your robot innovations and prototypes in this exciting tech expo.</p>
+        <button onclick="register('Robotics Expo', 150)">Register Now</button>
+      </div>
+    </div>
+
+    <!-- Event 4 -->
+    <div class="event-card">
+      <img src="quiz.png" alt="Tech Quiz">
+      <div class="event-details">
+        <h3>Tech Quiz Challenge</h3>
+        <p>Test your knowledge in various tech domains like AI, cybersecurity, and software.</p>
+        <button onclick="register('Tech Quiz Challenge', 75)">Register Now</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  © 2025 College Event Management
+</footer>
+
+<<script>
+    function register(eventName, amount) {
+      const url = `register.html?event=${encodeURIComponent(eventName)}&amount=${amount}`;
+      window.location.href = url;
+    }
+  </script>
+</body>
+</html>
